@@ -1,0 +1,1 @@
+const { shift } = require('.');

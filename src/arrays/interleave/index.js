@@ -6,29 +6,26 @@ const b = [4, 5, 6, 7, 8];
  * array's items will be added to the back.
  * - Time: O(n + m) linear. n = a.length, m = b.length.
  * - Space: O(n + m).
- * @param {any[]} a The first array to begin interleaving from.
- * @param {any[]} b The second array.
+ * @param {any[]} arrA The first array to begin interleaving from.
+ * @param {any[]} arrB The second array.
  * @returns {any[]} A new array containing the interleaved values.
  */
-function interleave(a, b) {
-  const combinedLength = a.length + b.length;
+function interleave(arrA, arrB) {
+  const combinedLength = arrA.length + arrB.length;
   const mergedArr = [];
 
   for (let i = 0; i < combinedLength; i++) {
-    if (i < a.length) {
-      mergedArr.push(a[i]);
+    if (i < arrA.length) {
+      mergedArr.push(arrA[i]);
     }
-    if (i < b.length) {
-      mergedArr.push(b[i]);
+    if (i < arrB.length) {
+      mergedArr.push(arrB[i]);
     }
   }
 
   return mergedArr;
 }
 
-const actual1 = interleave(a, b);
-const expected1 = [1, 4, 2, 5, -2, 6, 7, 8];
-
 module.exports = {
-  interleave: interleave,
+  interleave,
 };
