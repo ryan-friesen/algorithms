@@ -9,3 +9,7 @@ const expected1 = 3;
  * @returns {number} The count.
  */
 function countEvenNegatives(nums) {}
+
+module.exports = {
+  countEvenNegatives,
+};
