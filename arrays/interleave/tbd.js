@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const { interleave } = require('./interleave');
 
 test('interleave two same sized arrays', () => {

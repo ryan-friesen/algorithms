@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const { shift } = require('./shift');
 
 const arr2 = ['a', 'b', 'c', 'd'];
