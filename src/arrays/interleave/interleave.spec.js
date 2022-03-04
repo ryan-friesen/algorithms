@@ -31,15 +31,14 @@ describe('interleave', () => {
     const actual = interleave(arrA, arrB);
 
     expect(arrA)
-      .withContext('given arrays should be mutated')
+      .withContext('given arrays should not be mutated')
       .toEqual([1, 2, 3]);
 
     expect(arrB)
-      .withContext('given arrays should be mutated')
+      .withContext('given arrays should not be mutated')
       .toEqual(['a', 'b', 'c']);
 
     expect(actual).withContext('a new array should be returned').not.toBe(arrA);
-
     expect(actual).withContext('a new array should be returned').not.toBe(arrB);
   });
 });
