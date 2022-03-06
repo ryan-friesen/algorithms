@@ -9,16 +9,20 @@ const expected2 = 0;
  * @param {number} nums
  * @returns {number} The count.
  */
-function countEvenNegatives(nums) {
+function countEvenNegatives(nums = []) {
   let negativeEvenCount = 0;
   for (i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 == 0 && nums[i] < 0) {
+    if (nums[i] % 2 === 0 && nums[i] < 0) {
       negativeEvenCount++;
     }
   }
   return negativeEvenCount;
 }
 
+const countEvenNegatives2 = (nums = []) =>
+  nums.filter((n) => n < 0 && n % 2 === 0).length;
+
 module.exports = {
   countEvenNegatives,
+  countEvenNegatives2,
 };
