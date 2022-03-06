@@ -17,7 +17,14 @@ const arr2Expected = ['b', 'c', 'd'];
  * @returns {any} The removed value previously at idx 0.
  */
 function shift(items) {
-  // code here
+  const firstItem = items[0];
+
+  for (let i = 0; i < items.length - 1; i++) {
+    items[i] = items[i + 1];
+  }
+
+  items.pop();
+  return firstItem;
 }
 
 module.exports = {
