@@ -8,7 +8,20 @@ const expected1 = 3;
  * @param {number} nums
  * @returns {number} The count.
  */
-function countEvenNegatives(nums) {}
+function countEvenNegatives(nums1) {
+  console.log(nums1);
+  let sortedArray = nums1.sort((a, b) => a - b);
+  let negativeEvenCount = [];
+  for (i = 0; i < sortedArray.length; i++ ) {
+    if(sortedArray[i] % 2 == 0 && sortedArray[i] < 0) {
+      negativeEvenCount.push(sortedArray[i]);
+    }
+  }
+  console.log(sortedArray);
+  console.log(negativeEvenCount);
+}
+
+countEvenNegatives(nums1);
 
 module.exports = {
   countEvenNegatives,
