@@ -27,21 +27,21 @@ Failures:
 
 1 spec, 1 failure
 */
-describe('shift', () => {
-  it('should remove and return the first item, and shift the remaining items to the left by one index.', () => {
-    const smallArray = [1, 2, 3];
-    expect(shift(smallArray)).withContext('small array').toBe(1);
-    expect(smallArray).withContext('small array').toEqual([2, 3]);
+// describe('shift', () => {
+//   it('should remove and return the first item, and shift the remaining items to the left by one index.', () => {
+//     const smallArray = [1, 2, 3];
+//     expect(shift(smallArray)).withContext('small array').toBe(1);
+//     expect(smallArray).withContext('small array').toEqual([2, 3]);
 
-    const oneItemArray = [1];
-    expect(shift(oneItemArray)).withContext('one item array').toBe(1);
-    expect(oneItemArray).withContext('one item array').toEqual([]);
+//     const oneItemArray = [1];
+//     expect(shift(oneItemArray)).withContext('one item array').toBe(1);
+//     expect(oneItemArray).withContext('one item array').toEqual([]);
 
-    const emptyArray = [];
-    expect(shift(emptyArray)).withContext('empty array').toBe(undefined);
-    expect(emptyArray).withContext('empty array').toEqual([]);
-  });
-});
+//     const emptyArray = [];
+//     expect(shift(emptyArray)).withContext('empty array').toBe(undefined);
+//     expect(emptyArray).withContext('empty array').toEqual([]);
+//   });
+// });
 
 /******************************************************************************
 Organization pattern: one describe block with multiple 'it' blocks.
@@ -122,44 +122,44 @@ Failures:
 6 specs, 4 failures
   - The empty array test passes without doing anything.
 */
-// describe('shift', () => {
-//   const shouldReturnMsg = 'should return the first item from the given array.';
-//   const shouldShiftMsg =
-//     'should shift the remaining items to the left by one index.';
+describe('shift', () => {
+  const shouldReturnMsg = 'should return the first item from the given array.';
+  const shouldShiftMsg =
+    'should shift the remaining items to the left by one index.';
 
-//   describe('a small array', () => {
-//     const smallArray = [1, 2, 3];
+  describe('a small array', () => {
+    const smallArray = [1, 2, 3];
 
-//     it(shouldReturnMsg, () => {
-//       expect(shift(smallArray)).toBe(1);
-//     });
+    it(shouldReturnMsg, () => {
+      expect(shift(smallArray)).toBe(1);
+    });
 
-//     it(shouldShiftMsg, () => {
-//       expect(smallArray).toEqual([2, 3]);
-//     });
-//   });
+    it(shouldShiftMsg, () => {
+      expect(smallArray).toEqual([2, 3]);
+    });
+  });
 
-//   describe('a one item array', () => {
-//     const oneItemArray = [1];
+  describe('a one item array', () => {
+    const oneItemArray = [1];
 
-//     it(shouldReturnMsg, () => {
-//       expect(shift(oneItemArray)).toBe(1);
-//     });
+    it(shouldReturnMsg, () => {
+      expect(shift(oneItemArray)).toBe(1);
+    });
 
-//     it(shouldShiftMsg, () => {
-//       expect(oneItemArray).toEqual([]);
-//     });
-//   });
+    it(shouldShiftMsg, () => {
+      expect(oneItemArray).toEqual([]);
+    });
+  });
 
-//   describe('an empty array', () => {
-//     const emptyArray = [];
+  describe('an empty array', () => {
+    const emptyArray = [];
 
-//     it(shouldReturnMsg, () => {
-//       expect(shift(emptyArray)).toBe(undefined);
-//     });
+    it(shouldReturnMsg, () => {
+      expect(shift(emptyArray)).toBe(undefined);
+    });
 
-//     it(shouldShiftMsg, () => {
-//       expect(emptyArray).toEqual([]);
-//     });
-//   });
-// });
+    it(shouldShiftMsg, () => {
+      expect(emptyArray).toEqual([]);
+    });
+  });
+});
