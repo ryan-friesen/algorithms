@@ -120,6 +120,7 @@ Failures:
         Unexpected $[0] = 1 in array.
 
 6 specs, 4 failures
+  - The empty array test passes without doing anything.
 */
 // describe('shift', () => {
 //   const shouldReturnMsg = 'should return the first item from the given array.';
