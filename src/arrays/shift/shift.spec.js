@@ -97,11 +97,11 @@ Organization pattern: nested describe 'test suite' blocks.
 Example failure message format:
 
 Failures:
-1) shift a small array should return the first item from the given array.
+1) shift when given a small array should return the first item from the given array.
   Message:
     small array: Expected undefined to be 1.
 
-2) shift a small array should shift the remaining items to the left by one index.
+2) shift when given a small array should shift the remaining items to the left by one index.
   Message:
     small array:
         Expected $.length = 3 to equal 2.
@@ -109,11 +109,11 @@ Failures:
         Expected $[1] = 2 to equal 3.
         Unexpected $[2] = 3 in array.
 
-3) shift a one item array should return the first item from the given array.
+3) shift when given a one item array should return the first item from the given array.
   Message:
     oneItem array: Expected undefined to be 1.
 
-4) shift a one item array should shift the remaining items to the left by one index.
+4) shift when given a one item array should shift the remaining items to the left by one index.
   Message:
     one item array:
         Expected $.length = 1 to equal 0.
@@ -127,7 +127,7 @@ describe('shift', () => {
   const shouldShiftMsg =
     'should shift the remaining items to the left by one index.';
 
-  describe('a small array', () => {
+  describe('when given a small array', () => {
     const smallArray = [1, 2, 3];
 
     it(shouldReturnMsg, () => {
@@ -139,7 +139,7 @@ describe('shift', () => {
     });
   });
 
-  describe('a one item array', () => {
+  describe('when given a one item array', () => {
     const oneItemArray = [1];
 
     it(shouldReturnMsg, () => {
@@ -151,7 +151,7 @@ describe('shift', () => {
     });
   });
 
-  describe('an empty array', () => {
+  describe('when given a empty array', () => {
     const emptyArray = [];
 
     it(shouldReturnMsg, () => {
