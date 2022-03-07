@@ -16,7 +16,7 @@ function longestString(array) {
         };
     };
 
-    return longestItemLength;
+    return longest;
 };
 
 module.exports = {
