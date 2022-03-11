@@ -11,9 +11,15 @@ function longestString(array) {
     let mainArray = array;
     let longest = 0;
     for (i = 0; i < mainArray.length; i++) {
-        if (mainArray[i].length > longest) {
-            longest = mainArray[i].length;
-        };
+        try {
+            if (mainArray[i].length > longest) {
+                longest = mainArray[i].length;
+                console.log(longest);
+            };
+        }
+        catch (err) {
+            break;
+        }
     };
 
     return longest;
