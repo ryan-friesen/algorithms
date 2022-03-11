@@ -1,5 +1,3 @@
-const stringArray = ["short", "shorter", "shortest", "long", "longer", "longest"];
-const nullArray = [null, undefined];
 
 /**
  * Outputs the longest array item (or 0 if it's null/undefined) with a single
@@ -14,7 +12,6 @@ function longestString(array) {
         try {
             if (mainArray[i].length > longest) {
                 longest = mainArray[i].length;
-                console.log(longest);
             };
         }
         catch (err) {
