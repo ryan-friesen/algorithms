@@ -1,15 +1,3 @@
-const arr1 = [1, 2, 3];
-const expected1 = [3, 2, 1];
-
-const arr2 = ["a", "b"];
-const expected2 = ["b", "a"];
-
-const arr3 = ["a"];
-const expected3 = ["a"];
-
-const arr4 = [];
-const expected4 = [];
-
 /**
  * Reverses the given arr in place without built in methods.
  * - Time: O(?).
@@ -18,5 +6,17 @@ const expected4 = [];
  * @returns {Array<any>} The given arr after being reversed.
  */
 function reverseArr(items) {
-    // code here
+    for (let i = 0; i < Math.floor(items.length / 2); i++) {
+        let tempArrItem = items[i];
+        let tempArrItem2 = items[items.length - 1 - i];
+        items[items.length - (i + 1)] = tempArrItem;
+        items[i] = tempArrItem2;
+    }
+
+    return items;
+
 }
+
+module.exports = {
+    reverseArr,
+};
