@@ -28,9 +28,9 @@ const startIdx6 = 1;
 const endIdx6 = 1;
 const expected6 = [];
 
-const arr5 = ["a", "b", "c", "d", "e"];
+const arr7 = ["a", "b", "c", "d", "e"];
 // no indexes provided
-const expected5 = ["a", "b", "c", "d", "e"];
+const expected7 = ["a", "b", "c", "d", "e"];
 
 /**
  * Returns a slice of given arr from startidx inclusive to endIdx exclusive.
@@ -42,6 +42,10 @@ const expected5 = ["a", "b", "c", "d", "e"];
  * @param {number} endIdx
  * @returns {Array<any>} The new array slice.
  */
-function slice(items, startIdx, endIdx) {
-    // code here
+function sliceArr(items, startIdx, endIdx) {
+    return items.slice(startIdx, endIdx);
 }
+
+module.exports = {
+    sliceArr,
+};
