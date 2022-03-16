@@ -23,6 +23,5 @@ const countEvenNegatives2 = (nums = []) =>
   nums.filter((n) => n < 0 && n % 2 === 0).length;
 
 module.exports = {
-  countEvenNegatives,
-  countEvenNegatives2,
+  countEvenNegatives
 };
