@@ -15,6 +15,7 @@ function sumArrColumns(nums1, nums2) {
     let sumArr = [];
     for (let i = 0; i < nums1.length; i++) {
         sumArr[i] = nums1[i] + nums2[i];
+
     }
     return sumArr;
 };
