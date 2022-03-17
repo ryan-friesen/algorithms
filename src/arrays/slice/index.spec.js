@@ -57,7 +57,7 @@ const testCases = [
   },
   {
     args: [arr6, startIdx6, endIdx6],
-    expected: 5,
+    expected: expected6,
   },
   {
     args: [arr7],
